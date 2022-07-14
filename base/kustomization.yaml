@@ -4,12 +4,6 @@ kind: Kustomization
 
 resources:
   - git::https://github.com/DoD-Platform-One/big-bang.git//base/flux?ref=1.37.0
-
-patches:
-  - path: toleration-patch.yaml
-    target:
-      kind: Deployment
-      namespace: flux-system
-         
+      
 patchesStrategicMerge:
   - gotk-patches.yaml

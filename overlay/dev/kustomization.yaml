@@ -1,0 +1,12 @@
+---
+resources:
+  - git::https://github.com/DoD-Platform-One/big-bang.git/base?ref=1.37.0
+
+configMapGenerator:
+  - name: common
+    behavior: merge
+    files:
+      - values.yaml=values.yaml
+
+patchesStrategicMerge:
+  - values.enc.yaml
