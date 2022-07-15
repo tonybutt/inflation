@@ -13,4 +13,4 @@ configMapGenerator:
       - values.yaml=values.yaml
 
 patchesStrategicMerge:
-  - environment-bb-secret.yaml
+  - environment-bb-secret.enc.yaml
