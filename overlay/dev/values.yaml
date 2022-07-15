@@ -57,7 +57,5 @@ addons:
   argocd:
     enabled: true
 
-  velero:
-    enabled: true
   vault:
     enabled: true
