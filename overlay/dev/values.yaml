@@ -1,16 +1,8 @@
 domain: deliver.codes
 
 git:
-  existingSecret: ""
   credentials:
-    username: ""
-    password: ""
-    # -- HTTPS certificate authority file.  Required for any repo with a self signed certificate
-    caFile: ""
-    # -- SSH git credentials, privateKey, publicKey, and knownHosts must be provided
-    privateKey: ""
-    publicKey: ""
-    knownHosts: ""
+    username: "oauth2"
 
 flux:
   timeout: 10m

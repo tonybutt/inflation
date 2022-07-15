@@ -1,12 +1,16 @@
 ---
+bases:
+  - ../../base
+
 resources:
-  - git::https://github.com/DoD-Platform-One/big-bang.git/base?ref=1.37.0
+  - flux
 
 configMapGenerator:
-  - name: common
+  - name: environment
+    namespace: bigbang
     behavior: merge
     files:
       - values.yaml=values.yaml
 
 patchesStrategicMerge:
-  - values.enc.yaml
+  - environment-bb-secret.yaml

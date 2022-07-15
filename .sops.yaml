@@ -2,4 +2,5 @@
 creation_rules:
   - encrypted_regex: ^(data|stringData)$
     path_regex: overlay/dev/.*
-    kms: 
+    kms: 'arn:aws:kms:us-east-2:960125005494:alias/sops-manual'
+
