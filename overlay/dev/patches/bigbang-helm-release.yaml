@@ -1,0 +1,52 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: bigbang
+spec:
+  valuesFrom:
+    - kind: ConfigMap
+      name: istio
+
+  values:
+    domain: deliver.codes
+
+    git:
+      credentials:
+        username: "oauth2"
+
+    flux:
+      timeout: 10m
+      interval: 2m
+      test:
+        enable: false
+      install:
+        remediation:
+          retries: -1
+      upgrade:
+        remediation:
+          retries: 3
+          remediateLastFailure: true
+        cleanupOnFail: true
+      rollback:
+        timeout: 10m
+        cleanupOnFail: true
+    
+    logging:
+      enabled: false
+    eckoperator:
+      enabled: false
+    fluentbit:
+      enabled: false
+
+    promtail:
+      enabled: true
+    loki:
+      enabled: true
+    twistlock:
+      enabled: false
+
+    addons:
+      argocd:
+        enabled: true
+      vault:
+        enabled: true

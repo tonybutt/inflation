@@ -3,14 +3,8 @@ bases:
   - ../../base
 
 resources:
-  - flux
-
-configMapGenerator:
-  - name: environment
-    namespace: bigbang
-    behavior: merge
-    files:
-      - values.yaml=values.yaml
+  - resources
+  - configs
 
 patchesStrategicMerge:
-  - environment-bb-secret.enc.yaml
+  - patches/bigbang-helm-release.yaml

@@ -1,0 +1,8 @@
+---
+configMapGenerator:
+  - name: istio
+    namespace: bigbang
+    options:
+      disableNameSuffixHash: true
+    files:
+      - values.yaml=./istio/values.yaml
