@@ -8,3 +8,4 @@ resources:
 
 patchesStrategicMerge:
   - patches/bigbang-helm-release.yaml
+  - secrets/bigbang/environment-bb-secret.enc.yaml
