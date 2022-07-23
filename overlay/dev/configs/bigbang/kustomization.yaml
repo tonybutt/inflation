@@ -6,3 +6,17 @@ configMapGenerator:
       disableNameSuffixHash: true
     files:
       - values.yaml=./istio/values.yaml
+  - name: keycloak
+    namespace: bigbang
+    options:
+      disableNameSuffixHash: true
+    files:
+      - values.yaml=./keycloak/values.yaml
+
+secretGenerator:
+  - name: keycloak
+    namespace: bigbang
+    options:
+      disableNameSuffixHash: true
+    files:
+      - values.yaml=./keycloak/secret-values.enc.yaml

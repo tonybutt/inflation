@@ -6,6 +6,11 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: istio
+    - kind: ConfigMap
+      name: keycloak
+
+    - kind: Secret
+      name: keycloak
 
   values:
     domain: deliver.codes
