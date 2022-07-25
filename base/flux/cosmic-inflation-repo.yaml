@@ -11,4 +11,4 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/tonybutt/inflation
+  url: https://github.com/tonybutt/cosmic-inflation
