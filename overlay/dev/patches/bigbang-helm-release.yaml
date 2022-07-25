@@ -10,6 +10,8 @@ spec:
       name: keycloak
 
     - kind: Secret
+      name: environment-bb
+    - kind: Secret
       name: keycloak
 
   values:
