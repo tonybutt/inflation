@@ -19,4 +19,4 @@ secretGenerator:
     options:
       disableNameSuffixHash: true
     files:
-      - values.yaml=./keycloak/secret-values.enc.yaml
+      - values.yaml=./keycloak/secret.values.enc.yaml
