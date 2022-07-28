@@ -4,10 +4,3 @@ kind: Kustomization
 
 resources:
     - git::https://github.com/DoD-Platform-One/big-bang.git/base?ref=1.37.0
-    - flux
-
-configMapGenerator:
-  - name: common
-    behavior: merge
-    files:
-      - values.yaml=values.yaml
