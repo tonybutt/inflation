@@ -6,3 +6,4 @@ namespace: flux-system
 
 resources:
   - cosmic-inflation-kustomization.yaml
+  - cosmic-inflation-gitrepo.yaml

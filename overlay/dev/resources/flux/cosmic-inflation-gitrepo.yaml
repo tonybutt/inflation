@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: flux-cosmic-inflation
+  namespace: flux-system
+spec:
+  ignore: |
+    .git/
+    README.md
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/tonybutt/cosmic-inflation
