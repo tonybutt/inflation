@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: bigbang
 spec:
+  dependsOn:
+    - name: cert-manager
   valuesFrom:
     - kind: ConfigMap
       name: istio
